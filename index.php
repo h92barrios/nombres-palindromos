@@ -1,5 +1,9 @@
 <?php
 
+// Evalua el parametro name atravez del method GET en caso de existir se modifica a minuscula
+// con mb_strtolower() y se eliminan los espacion del inicio y del fin con trim() y se almacena
+// en $name. en el caso de no pasar el parametro name por GET se le asigna el valor NULL
+// a la variable $name.
 (isset($_GET['name'])) ? $name = trim( mb_strtolower( $_GET['name'] ) ) : $name = null;
 
 $array_explode = explode(" ", $name);
